@@ -13,7 +13,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   List<NewsModel> news = [];
-  List<User> user = [];
+  // List<User> user = [];
   @override
   void initState() {
     super.initState();
@@ -43,7 +43,8 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   Future<void> fetchNews() async {
-    final response = await NewsApi.fetchNews();
+    final response = await NewsApi.fetchNews(
+        "https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=c0cb83d6ac054269b5e2f4c397b898b9");
     setState(() {
       news = response;
     });

@@ -5,9 +5,9 @@ import 'package:newspaper/model/news_model.dart';
 import 'package:http/http.dart' as http;
 
 class NewsApi {
-  static Future<List<NewsModel>> fetchNews() async {
-    const url =
-        "https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=c0cb83d6ac054269b5e2f4c397b898b9";
+  static Future<List<NewsModel>> fetchNews(url) async {
+    // const url =
+    //     "https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=c0cb83d6ac054269b5e2f4c397b898b9";
     final uri = Uri.parse(url);
     final response = await http.get(uri);
     final body = response.body;

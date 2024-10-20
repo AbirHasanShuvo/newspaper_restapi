@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:newspaper/const/const.dart';
+import 'package:newspaper/home_screen/home_screen.dart';
+import 'package:newspaper/news_screen/news_screen.dart';
 
 class PScreen extends StatefulWidget {
   const PScreen({super.key});
@@ -16,7 +18,7 @@ class _PScreenState extends State<PScreen> {
   @override
   Widget build(BuildContext context) {
     List<String> items = [
-      'Home',
+      'BBC',
       'Explore',
       'Search',
       'Feed',
@@ -92,114 +94,7 @@ class _PScreenState extends State<PScreen> {
 
           //main screen start from here
 
-          Expanded(
-              child: SingleChildScrollView(
-            physics: const BouncingScrollPhysics(),
-            child: currentPosition == 3
-                ? const Column(
-                    children: [
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                      Text('hello World'),
-                    ],
-                  )
-                : const Text('No Hello World'),
-          ))
+          Expanded(child: NewsScreen(indexNumber: currentPosition))
         ],
       ),
     );
